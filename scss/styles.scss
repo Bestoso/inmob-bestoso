@@ -17,15 +17,10 @@
     --nav-name-size: 1.5rem;
     --font-size-normal: 1rem;
 
-    
-
     @media screen and (min-width: 768px){
         --nav-name-size: 1.2rem;
         --font-size-normal: 1rem;
-
-        
     }
-    /* Para ocultar el boton */
     --z-fixed: 100;
 }
 
@@ -261,13 +256,11 @@ a{
 .show{
     left: 0;
 }
-
 .active{
     color: var(--color-blanco);
 }
 
 .desplegable{
-
     &_link{
         display: flex;
         align-items: center;
@@ -296,9 +289,6 @@ a{
     }
 }
 
-/*==== HERO ====*/
-
-/* cambiar fontsizes */
 #hero{
     align-items:center;
     justify-content:center;
@@ -484,8 +474,6 @@ footer{
     }
 }
 
-/* PROPIEDADES */
-
 #hero3{
     background-color: #1f1f1f;
     height: 15vh;
@@ -604,8 +592,6 @@ footer{
     }
 }
 
-/* ASESORAMIENTO */
-
 #asesoramiento{
     padding: 20px;
     display: flex;
@@ -626,8 +612,6 @@ footer{
         margin: 10px 0px;
     }
 }
-
-/* SERVICIOS */
 
 #servicios{
     display: grid;
@@ -732,7 +716,6 @@ footer{
     }
 }
 
-
 #vid{
     position: relative;
     width: 100%;
@@ -802,7 +785,6 @@ footer{
             @extend .italica
         }
 
-
         .input {
             @include input();
             height: 40px;
@@ -846,9 +828,7 @@ footer{
     }
 }
 
-/* Servicios */
-
-/* ===== MEDIA QUERIES=====*/
+/* ===== MEDIA QUERIES =====*/
 @media screen and (min-width: 576px){
     .nav{
         width: 288px;

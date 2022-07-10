@@ -13,7 +13,6 @@
   --body-fuente: "Open Sans", sans-serif;
   --nav-name-size: 1.5rem;
   --font-size-normal: 1rem;
-  /* Para ocultar el boton */
   --z-fixed: 100;
 }
 @media screen and (min-width: 768px) {
@@ -245,8 +244,6 @@ a {
   transform: rotate(180deg);
 }
 
-/*==== HERO ====*/
-/* cambiar fontsizes */
 #hero {
   align-items: center;
   justify-content: center;
@@ -408,7 +405,6 @@ footer p {
   text-decoration: underline 2px var(--color-principal-claro);
 }
 
-/* PROPIEDADES */
 #hero3 {
   background-color: #1f1f1f;
   height: 15vh;
@@ -564,7 +560,6 @@ footer p {
   opacity: 70%;
 }
 
-/* ASESORAMIENTO */
 #asesoramiento {
   padding: 20px;
   display: flex;
@@ -583,7 +578,6 @@ footer p {
   margin: 10px 0px;
 }
 
-/* SERVICIOS */
 #servicios {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -777,8 +771,7 @@ footer p {
   padding-right: 35px;
 }
 
-/* Servicios */
-/* ===== MEDIA QUERIES=====*/
+/* ===== MEDIA QUERIES =====*/
 @media screen and (min-width: 576px) {
   .nav {
     width: 288px;
