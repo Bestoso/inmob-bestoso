@@ -18,7 +18,7 @@
 }
 @media screen and (min-width: 768px) {
   :root {
-    --nav-name-size: 1rem;
+    --nav-name-size: 1.2rem;
     --font-size-normal: 1rem;
   }
 }
@@ -46,6 +46,10 @@ body::-webkit-scrollbar-thumb {
   background: var(--color-gris);
   border-radius: 5px;
   border-right: 2px solid var(--color-negro);
+}
+
+.acento {
+  color: var(--color-principal);
 }
 
 .italica, #contacto .formulario h1 {
@@ -78,9 +82,9 @@ a {
 .generalBtn {
   display: inline-block;
   padding: 12px 24px;
-  background-color: rgba(20, 20, 20, 0.4745098039);
+  background-color: rgba(161, 161, 161, 0.0666666667);
   border: 1px solid var(--color-principal);
-  border-radius: 20px;
+  border-radius: 15px;
   transition: all 0.2s ease-in;
   position: relative;
   overflow: hidden;
@@ -412,10 +416,18 @@ footer p {
 }
 
 #tarjetas {
+  margin-top: var(--header-height);
   background-color: var(--color-bg);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-columns: repeat(10, 1fr);
+}
+#tarjetas h2 {
+  color: white;
+  padding: 20px;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  grid-column: 1/span12;
+  text-align: center;
 }
 #tarjetas .props {
   grid-column: span 12;
@@ -425,10 +437,9 @@ footer p {
   text-align: center;
   flex-direction: column;
   margin: 20px;
-  padding: 10px;
+  box-shadow: 0px 0px 10px var(--color-negro);
   border-radius: 10px;
-  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3098039216);
-  padding: 10px;
+  padding: 20px;
 }
 #tarjetas .img-props1 {
   background: url("../img/prop1.jpg");
@@ -437,8 +448,8 @@ footer p {
   background-position: center center;
   background-size: cover;
   border-radius: 10px;
-  border: 2px solid #b9894d;
   margin-top: 10px;
+  box-shadow: 0px 0px 10px var(--color-negro);
 }
 #tarjetas .img-props2 {
   background: url("../img/prop2.jpg");
@@ -447,8 +458,8 @@ footer p {
   background-position: center center;
   background-size: cover;
   border-radius: 10px;
-  border: 2px solid #b9894d;
   margin-top: 10px;
+  box-shadow: 0px 0px 10px var(--color-negro);
 }
 #tarjetas .img-props3 {
   background: url("../img/prop3.jpg");
@@ -457,8 +468,8 @@ footer p {
   background-position: center center;
   background-size: cover;
   border-radius: 10px;
-  border: 2px solid #b9894d;
   margin-top: 10px;
+  box-shadow: 0px 0px 10px var(--color-negro);
 }
 #tarjetas .img-props4 {
   background: url("../img/prop4.jpg");
@@ -467,8 +478,8 @@ footer p {
   background-position: center center;
   background-size: cover;
   border-radius: 10px;
-  border: 2px solid #b9894d;
   margin-top: 10px;
+  box-shadow: 0px 0px 10px var(--color-negro);
 }
 #tarjetas .img-props5 {
   background: url("../img/prop5.jpg");
@@ -477,8 +488,8 @@ footer p {
   background-position: center center;
   background-size: cover;
   border-radius: 10px;
-  border: 2px solid #b9894d;
   margin-top: 10px;
+  box-shadow: 0px 0px 10px var(--color-negro);
 }
 #tarjetas .img-props6 {
   background: url("../img/prop6.jpg");
@@ -487,8 +498,8 @@ footer p {
   background-position: center center;
   background-size: cover;
   border-radius: 10px;
-  border: 2px solid #b9894d;
   margin-top: 10px;
+  box-shadow: 0px 0px 10px var(--color-negro);
 }
 #tarjetas .img-props7 {
   background: url("../img/prop7.jpg");
@@ -497,8 +508,8 @@ footer p {
   background-position: center center;
   background-size: cover;
   border-radius: 10px;
-  border: 2px solid #b9894d;
   margin-top: 10px;
+  box-shadow: 0px 0px 10px var(--color-negro);
 }
 #tarjetas .img-props8 {
   background: url("../img/prop8.jpg");
@@ -507,8 +518,8 @@ footer p {
   background-position: center center;
   background-size: cover;
   border-radius: 10px;
-  border: 2px solid #b9894d;
   margin-top: 10px;
+  box-shadow: 0px 0px 10px var(--color-negro);
 }
 #tarjetas .img-props9 {
   background: url("../img/prop9.jpg");
@@ -517,8 +528,8 @@ footer p {
   background-position: center center;
   background-size: cover;
   border-radius: 10px;
-  border: 2px solid #b9894d;
   margin-top: 10px;
+  box-shadow: 0px 0px 10px var(--color-negro);
 }
 #tarjetas p {
   color: var(--color-principal);
@@ -533,62 +544,43 @@ footer p {
   text-decoration: underline 2px;
   margin: 5px;
 }
-#tarjetas .titulo {
-  grid-column: 1/12;
-  grid-row: 1;
-  text-align: center;
-  padding-top: 20px;
-}
-#tarjetas .titulo p {
-  margin-top: 10px;
-  color: var(--color-blanco);
-}
-#tarjetas .titulo h1 {
-  text-align: center;
-  animation-name: colorChange;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
 #tarjetas button {
   margin-top: 10px;
-  background-color: var(--color-principal);
+  background-color: var(--color-gris);
   border-radius: 10px;
   padding: 10px;
   color: var(--color-blanco);
   font-weight: bold;
-  border: 2px solid #b9894d;
+  border: 2px solid var(--color-principal);
   transition: all 0.5s;
+  cursor: pointer;
 }
 #tarjetas button:hover {
-  background-color: var(--color-blanco);
-  color: #b9894d;
+  background-color: var(--color-principal);
+  color: var(--color-a);
 }
 #tarjetas .light {
   color: var(--color-blanco);
   opacity: 70%;
 }
 
-@keyframes colorChange {
-  0% {
-    color: var(--color-blanco);
-  }
-  100% {
-    color: var(--color-principal);
-  }
-}
 /* ASESORAMIENTO */
 #asesoramiento {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  background-color: rgb(236, 236, 236);
 }
 #asesoramiento a {
   color: var(--color-principal);
 }
 #asesoramiento h2 {
-  margin: 10px;
+  margin: 15px;
 }
-#asesoramiento ol li {
-  margin: 10px;
+#asesoramiento ul li {
+  margin: 10px 0px;
 }
 
 /* SERVICIOS */
@@ -695,34 +687,38 @@ footer p {
 }
 
 .textvid {
-  padding: 50px;
-  background-color: var(--color-bg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.textvid h2 {
-  position: relative;
-  color: var(--color-blanco);
-  font-size: 2.5em;
-}
-.textvid p {
+.textvid .content {
+  margin: 10px;
   margin-top: 10px;
-  position: relative;
-  color: var(--color-blanco);
-  font-size: var(--font-size-normal);
-  z-index: 1;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 #contacto {
   margin-top: var(--header-height);
   display: grid;
   height: 91vh;
-  background-color: var(--color-bg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/moderno.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+}
+#contacto .mapa {
+  display: none;
 }
 #contacto .formulario {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   grid-column: 1/span12;
   margin: 20px;
   padding: 20px;
@@ -781,6 +777,7 @@ footer p {
   padding-right: 35px;
 }
 
+/* Servicios */
 /* ===== MEDIA QUERIES=====*/
 @media screen and (min-width: 576px) {
   .nav {
@@ -851,6 +848,9 @@ footer p {
   #hero {
     grid-template-rows: 1fr 100px 50px 1fr;
   }
+  #tarjetas {
+    margin-top: calc(var(--header-height) + 1rem);
+  }
   #tarjetas .props1 {
     grid-column: 1/6;
     grid-row: 2;
@@ -886,6 +886,28 @@ footer p {
   #tarjetas .props9 {
     grid-column: 3/9;
     grid-row: 6;
+  }
+  #contacto {
+    margin-top: calc(var(--header-height) + 1rem);
+    height: 95vh;
+  }
+  #contacto .formulario {
+    grid-column: 1/7;
+  }
+  #contacto .mapa {
+    grid-column: 7/13;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid var(--color-blanco);
+    background-color: rgba(255, 255, 255, 0.068);
+    margin: 20px;
+    border-radius: 10px;
+    color: var(--color-blanco);
+  }
+  #contacto .mapa iframe {
+    border-radius: 10px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -982,6 +1004,9 @@ footer p {
   }
   #hero2 .cont-form .cont-form__texto {
     display: flex;
+  }
+  #contacto {
+    height: 105vh;
   }
   #caracteristicas {
     height: 0.5vh;

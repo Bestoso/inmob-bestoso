@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 :root{
-    --header-height: 3rem;
+    --header-height:  3rem;
 
     --color-principal: #dc3156;
     --color-secondary: #d42248;
@@ -20,7 +20,7 @@
     
 
     @media screen and (min-width: 768px){
-        --nav-name-size: 1rem;
+        --nav-name-size: 1.2rem;
         --font-size-normal: 1rem;
 
         
@@ -35,8 +35,8 @@
     background-position: center center;
     background-size: cover;
     border-radius: 10px;
-    border: 2px solid #b9894d;
     margin-top: 10px;
+    box-shadow:0px 0px 10px var(--color-negro);
 }
 
 @mixin input {
@@ -76,6 +76,10 @@ body{
         }
 }
 
+.acento{
+    color: var(--color-principal);
+}
+
 .italica{
     margin-left: 5px;
     font-weight: 100;
@@ -106,9 +110,9 @@ a{
 .generalBtn{
     display: inline-block;
     padding: 12px 24px;
-    background-color: #14141479;
+    background-color: #a1a1a111;
     border: 1px solid var(--color-principal);
-    border-radius: 20px;
+    border-radius: 15px;
     transition: all 0.2s ease-in;
     position: relative;
     overflow: hidden;
@@ -489,10 +493,19 @@ footer{
 }
 
 #tarjetas{
+    margin-top: var(--header-height);
     background-color:  var(--color-bg);
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-columns: repeat(10, 1fr);
+
+    h2{
+        color: white;
+        padding: 20px;
+        font-size: 2rem;
+        letter-spacing: 3px;
+        grid-column: 1/span12;
+        text-align: center;
+    }
 
     .props{
         grid-column: span 12;
@@ -502,10 +515,9 @@ footer{
         text-align: center;
         flex-direction: column;
         margin: 20px;
-        padding: 10px;
+        box-shadow:0px 0px 10px var(--color-negro);
         border-radius: 10px;
-        box-shadow: 1px 1px 5px #ffffff4f;
-        padding: 10px;
+        padding: 20px;
     }
 
     .img-props1{
@@ -569,39 +581,20 @@ footer{
         margin: 5px;
     }
 
-    .titulo{
-        grid-column: 1/12;
-        grid-row: 1;
-        text-align: center;
-        padding-top: 20px;
-
-        p{
-            margin-top: 10px;
-            color:  var(--color-blanco);
-        }
-
-        h1{
-            text-align: center;
-            animation-name: colorChange;
-            animation-duration: 5s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-        }
-    }
-
     button{
         margin-top: 10px;
-        background-color:  var(--color-principal);
+        background-color:  var(--color-gris);
         border-radius: 10px;
         padding: 10px;
         color:  var(--color-blanco);
         font-weight: bold;
-        border: 2px solid #b9894d;
+        border: 2px solid var(--color-principal);
         transition: all 0.5s;
+        cursor: pointer;
 
         &:hover{
-            background-color:  var(--color-blanco);
-            color: #b9894d;
+            background-color:  var(--color-principal);
+            color: var(--color-a)
         }
     }
 
@@ -611,31 +604,26 @@ footer{
     }
 }
 
-@keyframes colorChange {
-    0%{
-        color:  var(--color-blanco);
-    }
-
-    100%{
-        color:  var(--color-principal);
-    }
-}
-
 /* ASESORAMIENTO */
 
 #asesoramiento{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    background-color: rgb(236, 236, 236);
 
     a{
         color: var(--color-principal);
     }
 
     h2{
-        margin: 10px;
+        margin: 15px;
     }
 
-    ol li{
-        margin: 10px;
+    ul li{
+        margin: 10px 0px;
     }
 }
 
@@ -767,21 +755,18 @@ footer{
 }
 
 .textvid{
-    padding: 50px;
-    background-color: var(--color-bg);
-
-    h2{
-    position: relative;
-    color: var(--color-blanco);
-    font-size: 2.5em;
-    }
-
-    p{
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    .content{
+        margin: 10px;
         margin-top: 10px;
-        position: relative;
-        color: var(--color-blanco);
-        font-size: var(--font-size-normal);
-        z-index: 1;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
 
@@ -789,14 +774,21 @@ footer{
     margin-top:var(--header-height);
     display: grid;
     height: 91vh;
-    background-color:var(--color-bg);
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("../img/moderno.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3,1fr);
+
+    .mapa{
+        display: none;
+    }
 
     .formulario{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         grid-column: 1/span12;
         margin: 20px;
         padding: 20px;
@@ -851,11 +843,10 @@ footer{
             padding-left: 35px;
             padding-right: 35px;
         }
-
-
     }
 }
 
+/* Servicios */
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (min-width: 576px){
@@ -950,6 +941,7 @@ footer{
         }
 
         #tarjetas{
+            margin-top: calc(var(--header-height) + 1rem);
 
             .props1{
                 grid-column: 1/6;
@@ -994,6 +986,35 @@ footer{
             .props9{
                 grid-column: 3/9;
                 grid-row: 6;
+            }
+        }
+
+        #contacto{
+            margin-top: calc(var(--header-height) + 1rem);
+            height: 95vh;
+
+            .formulario{
+                grid-column: 1/7;
+            }
+
+            .mapa{
+                grid-column: 7/13;
+                display: flex;
+                align-items: center;
+                align-items: center;
+                padding: 20px;
+                border: 1px solid var(--color-blanco);
+                background-color: rgba(255, 255, 255, 0.068);
+                margin: 20px;
+
+        
+                border-radius: 10px;
+                color: var(--color-blanco);
+
+                iframe{
+                    border-radius: 10px;
+
+                }
             }
         }
 }
@@ -1115,6 +1136,10 @@ footer{
                 display: flex;
             }
         }
+    }
+
+    #contacto{
+        height: 105vh;
     }
 
     #caracteristicas{
